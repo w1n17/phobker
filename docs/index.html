@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Darknet</title>
+
+</head>
+
+<body>
+    <h1  id="your-id-name"> HOSTJOIN </h1>
+    <label id="your-id-name" for="username">Username:</label>
+    <input type="text" id="username"  placeholder="Логин">
+<br><br>
+<label>Password:</label>
+<input type="text" id="password"  placeholder="Пароль">
+
+<br><br>
+<input type="button" value="Join" onclick="login()">
+
+</body>
+
+<script src="script.js"></script>
+<script>
+    alert('Вы уверены что хотите перейти на данный сайт?')
+    function login () {
+        elem = document.getElementById('username');
+        username = elem.value;
+        elem = document.getElementById('password');
+        password = elem.value
+       if ((username =="admin") && (password == "12345"))  {
+        alert("Добро пожаловать!");
+        window.open("Ussr.html", "_self");
+       }
+        else if ((username =="user") && (password == "0000"))  {
+        alert("Добро пожаловать!");
+        window.open("SampleText.html", "_self");
+        }
+        else {
+        alert("Неверный логин или пароль");
+        elem = document.getElementById('username');
+        username = elem.value;
+        elem.style.background = 'red';
+        elem = document.getElementById('password');
+        password = elem.value;
+        elem.style.background = 'red';
+       }
+    }
+    
+</script>
+
+</html>
